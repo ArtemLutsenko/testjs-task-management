@@ -1,11 +1,11 @@
-import { TaskStatus } from '../tasks/task.interface';
+import { TaskStatusEnum } from '../tasks/taskStatus.enum';
 import { IsEnum, IsOptional, IsString } from "class-validator";
 
 export class GetFilterDto {
 
   @IsOptional()
-  @IsEnum(TaskStatus)
-  readonly status?: TaskStatus;
+  @IsEnum(TaskStatusEnum)
+  readonly status?: TaskStatusEnum;
 
 
   @IsOptional()
